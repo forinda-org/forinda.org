@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Star } from "lucide-react"
+import Image from "next/image"
 
 const testimonials = [
   {
@@ -44,11 +45,13 @@ export function Testimonials() {
                     <Star key={i} className="h-5 w-5 fill-primary text-primary" />
                   ))}
                 </div>
-                <blockquote className="text-base leading-relaxed mb-6 text-pretty">"{testimonial.quote}"</blockquote>
+                <blockquote className="text-base leading-relaxed mb-6 text-pretty">&ldquo;{testimonial.quote}&rdquo;</blockquote>
                 <div className="flex items-center gap-3">
-                  <img
+                  <Image
                     src={testimonial.avatar || "/placeholder.svg"}
                     alt={testimonial.author}
+                    width={48}
+                    height={48}
                     className="h-12 w-12 rounded-full object-cover"
                   />
                   <div>

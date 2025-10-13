@@ -39,14 +39,14 @@ export function About() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance">About Forinda</h2>
             <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
               Founded by farmers for farmers, Forinda bridges the gap between traditional agriculture and modern
-              technology. We understand the challenges you face because we've lived them.
+              technology. We understand the challenges you face because we&apos;ve lived them.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
               Our team of agronomists, engineers, and data scientists work together to create solutions that are
               practical, affordable, and truly make a difference in your daily operations.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-              With over 500 farms already using our platform, we're building a community of forward-thinking farmers who
+              With over 500 farms already using our platform, we&apos;re building a community of forward-thinking farmers who
               are shaping the future of agriculture.
             </p>
           </div>
