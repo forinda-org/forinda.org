@@ -78,6 +78,16 @@ jobs:
         run: |
           rm -rf repo/node_modules repo/.next/cache
 
+      - name: Ensure remote directory
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.HOST_PORT }}
+          script: |
+            mkdir -p "${{ secrets.REMOTE_TARGET }}"
+
       - name: Upload build to server
         uses: appleboy/scp-action@v0.1.7
         with:
