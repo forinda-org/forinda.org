@@ -110,6 +110,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.HOST_PORT }}
           script: |
+            whoami
             pwd
             ls -la
             echo "timestamp: $(date +%s)"
