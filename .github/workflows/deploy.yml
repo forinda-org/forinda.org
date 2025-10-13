@@ -110,10 +110,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.HOST_PORT }}
           script: |
-            whoami
-            pwd
-            ls -la
-            echo "timestamp: $(date +%s)"
+            echo "timestamp: $(date +%s)" > timestamp.txt
             cd "${{ secrets.REMOTE_TARGET }}"
             FILE=${DOCKER_COMPOSE_FILE:-docker-compose.yml}
             docker compose -f "$FILE" up -d --build
