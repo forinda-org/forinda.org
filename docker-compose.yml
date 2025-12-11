@@ -6,6 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: forinda-org/web:latest
+    container_name: forinda-web
     restart: unless-stopped
     env_file:
       - .env.production
