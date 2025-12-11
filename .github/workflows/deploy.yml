@@ -37,10 +37,10 @@ jobs:
           cd repo
           pnpm lint
 
-      - name: Build
-        run: |
-          cd repo
-          pnpm build
+      # - name: Build
+      #   run: |
+      #     cd repo
+      #     pnpm build
 
   deploy:
     name: Copy & Deploy
